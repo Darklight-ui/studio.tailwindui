@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Award winning developer studio based in Denmark">
+    <meta name="keywords" content="HTML, CSS, JavaScript, Meta Tags">
+    <meta name="author" content="codecanvas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio - Award winning developer studio based in Denmark</title>
+    <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <script src="./src/tailwind/tailwind.js"></script>
+    <script>
+        tailwind.config = {
+      theme: {
+        extend: {
+        screens:{
+            
+        },
+          colors: {
+            clifford: '#da373d',
+          },
+         fontFamily:{
+            openSans: ['"Open Sans"', 'sans-serif'],
+            monserrat: ['"Montserrat"', 'sans-serif']
+         },
+         borderRadius:{
+            '3xl': '2.5rem'
+         }
+        }
+      }
+    }
+    </script>
+
+    <style>
+        .menu-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            width: 24px;
+            height: auto;
+            position: relative;
+        }
+        .menu-icon span {
+            position: absolute;
+            width: 28px;
+            height: 3px;
+            background-color: #000;
+            transition: all 0.5s;
+        }
+        .menu-icon span:nth-child(1){
+            top: 14px;
+        }
+        .menu-icon span:nth-child(1){
+            top: 0px;
+        }
+        .menu-icon.open span:nth-child(1){
+            transform: rotate(45deg) translate(14px, 5px);
+        }
+        .menu-icon.open span:nth-child(2){
+            transform: rotate(-45deg) translate(2px, 5px);
+        }
+    </style>
+</head>
+<body class="flex min-h-full flex-col bg-black p-0 m-0">
+      <!-- white container -->
+       <section class="flex flex-col max-w-full w-screen min-h-screen bg-white mt-2 border rounded-tr-3xl rounded-tl-3xl">
+        <!-- Nav -->
+        <div class="w-full flex px-9 py-10 justify-between">
+                     <div class="">
+            <img src="./src/images/image.png" alt="logo">
+         </div>
+         <div class="inline-flex items-center items-baseline">
+            <!-- menu -->
+            <button class="bg-black text-white px-2 text-sm py-2 flex justify-end md:px-6 self-center rounded-full font-openSans capitalize focus:outline-none border-none font-bold">contact us</button>
+            <!-- menu btn -->
+            <button id="menu-btn" class="menu-icon p-2 self-center m-3">
+                <span ></span>
+                <span></span>
+            </button>
+         </div>
+        </div>
+        <!-- Hero Section -->
+        <section class="container flex justify-start w-full p-6 mx-auto md:mt-40 md:items-center ">
+            <div class=" w-full md:w-3/4 max-w-fit">
+                <p class="text-4xl md:text-5xl md:text-7xl font-monserrat font-medium my-3">Award-winning development studio based in Denmark.</p>
+                <p class=" font-monserrat text-gray-500 font-semibold mt-12 mb-14 text-sm md:text-xl">We are a development studio working at the intersection of design and technology. It’s a really busy intersection though — a lot of our staff have been involved in hit and runs.</p>
+            </div>
+        </section>
+
+        <!-- Companies we've worked with -->
+         <section class="bg-black flex flex-col min-h-full p-9 w-full rounded-r-3xl rounded-l-3xl md:my-20 ">
+            <div class="container flex mx-auto justify-start items-center  w-full my-14">
+                <p class="text-white font-semibole min-w-fit text-center flex justify-start px-3 font-bold font-monserrat mt-9">We’ve worked with hundreds of amazing people</p>
+                <hr class="flex border-slate-800 w-screen max-w-full text-center justify-center mt-9">
+            </div>
+            <div class=" text-white container mx-auto px-3  gap-8 my-14 grid grid-cols-2 md:grid-cols-4">
+              <img src="./src/images/logo-light.1704e6d8.svg" alt="1"><img src="./src/images/logo-light.249606f6.svg" alt="2"><img src="./src/images/logo-light.456aa9d9.svg" alt="3"><img src="./src/images/logo-light.5c8de99c.svg" alt="4"><img src="./src/images/logo-light.ada2d552.svg" alt="5"><img src="./src/images/logo-light.da1195d8.svg" alt="6"><img src="./src/images/logo-light.e19f9c9b.svg" alt="7"><img src="./src/images/logo-light.f6ce2960.svg" alt="8">
+            </div>
+         </section>
+
+         <!-- Goal -->
+         <section class="container flex mt-14 justify-start w-full px-6 mx-auto md:min-h-full md:items-center">
+            <div class="w-full md:w-1/2 max-w-fit">
+                <p class="text-4xl md:text-5xl font-monserrat font-medium my-3">Harnessing technology for a brighter future</p>
+                <p class="md:text-xl font-monserrat text-gray-500 font-semibold mt-6 mb-14">We believe technology is the answer to the world’s greatest challenges. It’s also the cause, so we find ourselves in bit of a catch 22 situation.</p>
+            </div>
+         </section>
+
+         <!-- Project -->
+           <section class="container  w-full px-6 mx-auto md:min-h-full md:items-center">
+                <div class="w-screen max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-3 justify-between items-center py-9 px-3">
+            <div class="p-6 flex flex-col max-w-fit w-full">
+                <img src="./src/images/logo-light.5c8de99c.svg" alt="img">
+                <p class="text-xs gap-3 font-openSans pb-6 text-gray-500"><span class="font-bold text-black">2021 </span>/ Case study</p>
+                <p class="text-2xl font-semibold font-openSans pb-3 ">Skip the bank, borrow from those you trust</p>
+                <p class="text-gray-500 font-openSans">FamilyFund is a crowdfunding platform for friends and family. Allowing users to take personal loans from their network without a traditional financial institution.
+
+</p>
+            </div>
+            <div class="p-6 flex flex-col max-w-fit w-full">
+                <img src="./src/images/logo-light.f6ce2960.svg" alt="img">
+                <p class="text-xs gap-3 font-openSans pb-6 text-gray-500"><span class="font-bold text-black">2021 </span>/ Case study</p>
+                <p class="text-2xl font-semibold font-openSans pb-3 ">Overcome your fears, find your match</p>
+                <p class="text-gray-500 font-openSans">Find love in the face of fear — Phobia is a dating app that matches users based on their mutual phobias so they can be scared together.
+</p>
+            </div>
+            <div class="p-6 flex flex-col max-w-fit w-full">
+                <img src="./src/images/logo-light.249606f6.svg" alt="img">
+                <p class="text-xs gap-3 font-openSans pb-6 text-gray-500"><span class="font-bold text-black">2021 </span>/ Case study</p>
+                <p class="text-2xl font-semibold font-openSans pb-3 ">Get a hodl of your health</p>
+                <p class="text-gray-500 font-openSans">Unseal is the first NFT platform where users can mint and trade NFTs of their own personal health records, allowing them to take control of their data.
+
+</p>
+            </div>
+                </div>
+           </section>
+
+     </section>
+
+    <script>
+        const btn = document.getElementById('menu-btn')
+        btn.addEventListener('click', ()=>{
+            btn.classList.toggle('open')
+        })
+    </script>
+</body>
+</html>
