@@ -63,6 +63,15 @@
         .menu-icon.open span:nth-child(2){
             transform: rotate(-45deg) translate(2px, 5px);
         }
+        .slide-up{
+            transform: translateY(100px);
+            transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+        .slide-up.show{
+            transform: translateY(0);
+            opacity: 1;
+        }
     </style>
 </head>
 <body class="flex min-h-full flex-col bg-black p-0 m-0">
@@ -85,7 +94,7 @@
         </div>
         <!-- Hero Section -->
         <section class="container flex justify-start w-full p-6 mx-auto md:mt-40 md:items-center ">
-            <div class=" w-full md:w-3/4 max-w-fit">
+            <div class=" w-full md:w-3/4 max-w-fit slide-up" id="slide-in-element">
                 <p class="text-4xl md:text-5xl md:text-7xl font-monserrat font-medium my-3">Award-winning development studio based in Denmark.</p>
                 <p class=" font-monserrat text-gray-500 font-semibold mt-12 mb-14 text-sm md:text-xl">We are a development studio working at the intersection of design and technology. It’s a really busy intersection though — a lot of our staff have been involved in hit and runs.</p>
             </div>
@@ -98,13 +107,20 @@
                 <hr class="flex border-slate-800 w-screen max-w-full text-center justify-center mt-9">
             </div>
             <div class=" text-white container mx-auto px-3  gap-8 my-14 grid grid-cols-2 md:grid-cols-4">
-              <img src="./src/images/logo-light.1704e6d8.svg" alt="1"><img src="./src/images/logo-light.249606f6.svg" alt="2"><img src="./src/images/logo-light.456aa9d9.svg" alt="3"><img src="./src/images/logo-light.5c8de99c.svg" alt="4"><img src="./src/images/logo-light.ada2d552.svg" alt="5"><img src="./src/images/logo-light.da1195d8.svg" alt="6"><img src="./src/images/logo-light.e19f9c9b.svg" alt="7"><img src="./src/images/logo-light.f6ce2960.svg" alt="8">
+              <img src="./src/images/logo-light.1704e6d8.svg" alt="1" class="slide-up slide-up-element" id="slide-up-element">
+              <img src="./src/images/logo-light.249606f6.svg" alt="2" class="slide-up slide-up-element" id="slide-up-element">
+              <img src="./src/images/logo-light.456aa9d9.svg" alt="3" class="slide-up slide-up-element" id="slide-up-element">
+              <img src="./src/images/logo-light.5c8de99c.svg" alt="4" class="slide-up slide-up-element" id="slide-up-element">
+              <img src="./src/images/logo-light.ada2d552.svg" alt="5" class="slide-up slide-up-element" id="slide-up-element">
+              <img src="./src/images/logo-light.da1195d8.svg" alt="6" class="slide-up slide-up-element" id="slide-up-element">
+              <img src="./src/images/logo-light.e19f9c9b.svg" alt="7" class="slide-up slide-up-element" id="slide-up-element">
+              <img src="./src/images/logo-light.f6ce2960.svg" alt="8" class="slide-up slide-up-element" id="slide-up-element">
             </div>
          </section>
 
          <!-- Goal -->
          <section class="container flex mt-14 justify-start w-full px-6 mx-auto md:min-h-full md:items-center">
-            <div class="w-full md:w-1/2 max-w-fit">
+            <div class="w-full md:w-1/2 max-w-fit slide-up">
                 <p class="text-4xl md:text-5xl font-monserrat font-medium my-3">Harnessing technology for a brighter future</p>
                 <p class="md:text-xl font-monserrat text-gray-500 font-semibold mt-6 mb-14">We believe technology is the answer to the world’s greatest challenges. It’s also the cause, so we find ourselves in bit of a catch 22 situation.</p>
             </div>
@@ -113,7 +129,7 @@
          <!-- Project -->
            <section class="container  w-full px-6 mx-auto md:min-h-full md:items-center">
                 <div class="w-screen max-w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3  gap-3 justify-between items-center py-9 px-3">
-            <div class="p-6 flex flex-col max-w-fit w-full">
+            <div class="p-6 flex flex-col max-w-fit w-full slide-up">
                 <img src="./src/images/logo-light.5c8de99c.svg" alt="img">
                 <p class="text-xs gap-3 font-openSans pb-6 text-gray-500"><span class="font-bold text-black">2021 </span>/ Case study</p>
                 <p class="text-2xl font-semibold font-openSans pb-3 ">Skip the bank, borrow from those you trust</p>
@@ -121,14 +137,14 @@
 
 </p>
             </div>
-            <div class="p-6 flex flex-col max-w-fit w-full">
+            <div class="p-6 flex flex-col max-w-fit w-full slide-up">
                 <img src="./src/images/logo-light.f6ce2960.svg" alt="img">
                 <p class="text-xs gap-3 font-openSans pb-6 text-gray-500"><span class="font-bold text-black">2021 </span>/ Case study</p>
                 <p class="text-2xl font-semibold font-openSans pb-3 ">Overcome your fears, find your match</p>
                 <p class="text-gray-500 font-openSans">Find love in the face of fear — Phobia is a dating app that matches users based on their mutual phobias so they can be scared together.
 </p>
             </div>
-            <div class="p-6 flex flex-col max-w-fit w-full">
+            <div class="p-6 flex flex-col max-w-fit w-full slide-up">
                 <img src="./src/images/logo-light.249606f6.svg" alt="img">
                 <p class="text-xs gap-3 font-openSans pb-6 text-gray-500"><span class="font-bold text-black">2021 </span>/ Case study</p>
                 <p class="text-2xl font-semibold font-openSans pb-3 ">Get a hodl of your health</p>
@@ -142,6 +158,30 @@
      </section>
 
     <script>
+        // Slide Up Effect
+                function load() {
+            const loadElement = document.getElementById('slide-in-element');
+            loadElement.classList.add('show')
+        }
+
+         function scroll(){
+            const slideElement = document.querySelectorAll('.slide-up');
+          slideElement.forEach(slideElement =>{
+              const rect = slideElement.getBoundingClientRect();
+            if(rect.top < window.innerHeight){
+                slideElement.classList.add('show')
+            } else{
+                slideElement.classList.remove('show')
+            }
+          })
+        }
+
+
+
+        window.addEventListener('load', load);
+        window.addEventListener('scroll', scroll);
+
+        // btn
         const btn = document.getElementById('menu-btn')
         btn.addEventListener('click', ()=>{
             btn.classList.toggle('open')
